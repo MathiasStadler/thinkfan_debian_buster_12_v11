@@ -4,7 +4,7 @@
 
 ## Project target
 
-## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.10 operating system and Lenovo hardware of the ThinkCentre M92P type
+## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.10 operating system and Lenovo hardware typ ThinkCentre M92P
 
 ## Project start date
 
@@ -108,22 +108,64 @@ V8: 13.2.152.41-electron.0
 OS: Linux x64 6.1.0-34-
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
->[!NOTE]man page [![alt text][1]](https://linux.die.net/man/1/curl)
->Different curl vs wget [![alt text][1]](https://daniel.haxx.se/docs/curl-vs-wget.html)
+>[!NOTE]
+> Manual page **curl** [![alt text][1]](https://linux.die.net/man/1/curl)
+>
+> Manual page **wget** [![alt text][1]](https://linux.die.net/man/1/wget)
+>
 <!--- THis empty line inside the block is necessary for correct format -->
-## Download Link symbol via wget [![alt text][1]](https://askubuntu.com/questions/207265/how-to-download-a-file-from-a-website-via-terminal) man page [![alt text][1]](https://linux.die.net/man/1/wget)
+>[!NOTE]
+>Different between the utilities ``curl`` vs ``wget`` [![alt text][1]](https://daniel.haxx.se/docs/curl-vs-wget.html)
 <!--- THis empty line inside the block is necessary for correct format -->
-### Command option wget
-<!-- markdownlint-disable MD032 -->
--P ``<dir>``  **UPPER LETTER**  
---page-requisites  
-This option causes Wget to download all the files that are necessary to properly display a given HTML page. This includes such things as inlined images, sounds, and referenced stylesheets
-<!--- THis empty line inside the block is necessary for correct format -->
-## Command to create folder and download
+<!-- FIXIT sudo apt-get update vs upgrade – What is the Difference https://www.freecodecamp.org/news/sudo-apt-get-update-vs-upgrade-what-is-the-difference/ -->
+<!-- TODO check is a package already installed in the latest stable version>
+<!-- TODO Find daily Use Case for a PC Computer-->
+<!-- TODO hOW enable thinkfan now on debian -->
+<!-- TODO Docker/Podman image for compile optimize gcc scache -->
+<!-- TODO user less scache command without editor-->
+<!-- TODO best optimize version for gcc depend of cpu mem io -->
+<!-- TODO count intration of program / debug >
+## Used compiler
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash
-mkdir -p img && wget  -P img/ "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg"
+gcc --version
+gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
+<!--- THis empty line inside the block is necessary for correct format -->
+## Install & update necessary package [![alt text][1]](https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html)
+<!--- THis empty line inside the block is necessary for correct format -->
+```bash
+sudo -i # make user to root
+apt update # fetches the latest version of the package list from your distro's software repository
+apt upgrade # upgrade is used to install available upgrades of all packages currently installed on the system from the sources configured via sources.list
+apt install -y cmake-curses-gui
+apt install -y build-essential
+apt install -y cmake
+apt install -y g++
+apt install -y libyaml-cpp-dev
+apt install -y libyaml-cpp-dev pkgconfig
+apt install -y libyaml-cpp-dev pkg-config
+apt install -y libsensors-dev
+
+
+```
+
+>[!TIP]
+<!--- THis empty line inside the block is necessary for correct format -->
+>- Download Link symbol via wget [![alt text][1]](https://askubuntu.com/questions/207265/how-to-download-a-file-from-a-website-via-terminal) man page [![alt text][1]](https://linux.die.net/man/1/wget)
+>- Command option wget
+>   -P ``<dir>``  **UPPER LETTER**  
+>   --page-requisites  
+>   This option causes Wget to download all the files that are necessary to properly display a given HTML page. This includes such things as inlined images, sounds, and referenced stylesheets
+<!--- THis empty line inside the block is necessary for correct format -->
+>## Command to create folder and download via bash shell
+<!--- THis empty line inside the block is necessary for correct format -->
+>```bash
+>mkdir -p img && wget  -P img/ "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/>360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg"
+>```
 <!--- THis empty line inside the block is necessary for correct format -->
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
