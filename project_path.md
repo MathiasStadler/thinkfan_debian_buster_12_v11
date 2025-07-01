@@ -159,24 +159,32 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake)
 > set command options [![alt text][1]](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 >
 >```set -euxo pipefail```  
+<!-- -->
 >> set -> Modifying Shell Behavior  
->> -e ->  Exit immediately if a pipeline,
->> which may consist of a single simple command  
+<!-- -->
+>> -e ->  
+>>> Exit immediately if a pipeline,
+>>> which may consist of a single simple command  
+<!-- -->
 >> -u ->  
 >>> Treat unset variables and parameters other than the
 >>> special parameters ‘@’ or ‘*’, or array variables
 >>> subscripted with ‘@’ or ‘*’, as an error when
 >>> performing parameter expansion. An error message
 >>> will be written to the standard error, and
->>> a non-interactive shell will exit.
+>>> a non-interactive shell will exit.  
+<!-- -->
 >> -x ->  
 >>> Print a trace of simple commands, for commands, case
 >>> commands, select commands, and arithmetic for commands
 >>> and their arguments or associated word lists after they
 >>> are expanded and before they are executed. The value of
 >>> the PS4 variable is expanded and the resultant value
->>> is printed before the command and its expanded arguments
+>>> is printed before the command and
+>>> its expanded arguments  
+<!-- -->
 >> -o -> Set the option corresponding to option-name  
+<!-- -->  
 >> pipefail -> If set, the return value of a pipeline
 >>> is the value of the last (rightmost) command
 >>> to exit with >>a non-zero status, or zero if all commands
