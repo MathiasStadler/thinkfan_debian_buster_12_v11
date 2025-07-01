@@ -145,7 +145,19 @@ cmake version 3.25.1
 CMake suite maintained and supported by Kitware (kitware.com/cmake)
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
-
+>[!TIP]
+>Get running script name using bash parameter [![alt text][1]](https://www.cyberciti.biz/faq/bash-get-basename-of-filename-or-directory-name/)
+>
+>```bash
+>#!/bin/bash
+>_self="${0##*/}"
+>echo "$_self is called"
+>
+>## or in usage() ##
+>usage(){
+>    echo "$_self: arg1 arg2"
+>}
+>```
 <!--- THis empty line inside the block is necessary for correct format -->
 >[!TIP]
 >TL;DR: What is the Set Command in Linux? [![alt text][1]](https://ioflood.com/blog/set-linux-command/)
@@ -188,7 +200,7 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake)
 >> pipefail -> If set, the return value of a pipeline
 >>> is the value of the last (rightmost) command
 >>> to exit with >>a non-zero status, or zero if all commands
->>> in the pipeline >>exit successfully. This option 
+>>> in the pipeline >>exit successfully. This option
 >>> is disabled by default.
 >
 <!--- THis empty line inside the block is necessary for correct format -->
