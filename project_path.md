@@ -4,7 +4,7 @@
 <!--- THis empty line inside the block is necessary for correct format -->
 ## Project target
 <!--- THis empty line inside the block is necessary for correct format -->
-## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.10 operating system and Lenovo hardware typ ThinkCentre M92P
+## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.11 operating system and a Lenovo hardware typ ThinkCentre M92P
 <!--- THis empty line inside the block is necessary for correct format -->
 ## Project start date
 <!--- THis empty line inside the block is necessary for correct format -->
@@ -30,12 +30,13 @@ hostnamectl
 Firmware Version: 9SKT58AUS
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
-### How do install lshw  on debian [![alt text][1]](https://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/)
-<!--- THis empty line inside the block is necessary for correct format -->
-```bash<!-- markdownlint-disable-line code-block-style -->
-sudo apt update
-sudo apt install lshw
-```
+>[!TIP]
+> How do install lshw  on debian [![alt text][1]](https://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/)
+><!--- THis empty line inside the block is necessary for correct format -->
+>```bash<!-- markdownlint-disable-line code-block-style -->
+>sudo apt update
+>sudo apt install lshw
+>```
 <!--- THis empty line inside the block is necessary for correct format -->
 ### Used hardware
 <!--- THis empty line inside the block is necessary for correct format -->
@@ -91,7 +92,7 @@ $ uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
-## IDE used for the project - MS Visual Studio Code
+## IDE used for this project - MS Visual Studio Code
 <!--- THis empty line inside the block is necessary for correct format -->
 ```text
 Version: 1.100.2
@@ -160,14 +161,27 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake)
 >```set -euxo pipefail```  
 >> set -> Modifying Shell Behavior  
 >> -e ->  Exit immediately if a pipeline,
->> which may consist of a single simple command
->> -u ->
+>> which may consist of a single simple command  
+>> -u ->  
+>>> Treat unset variables and parameters other than the
+>>> special parameters ‘@’ or ‘*’, or array variables
+>>> subscripted with ‘@’ or ‘*’, as an error when
+>>> performing parameter expansion. An error message
+>>> will be written to the standard error, and
+>>> a non-interactive shell will exit.
 >> -x ->  
->>>Print a trace of simple commands, for commands,
->>> case commands, select commands, and arithmetic for >> >>>commands and their arguments or associated word lists >>>after >>they are expanded and before they are executed. >>>The value >>of the PS4 variable is expanded and the >>>resultant value is >>printed before the command and its >>>expanded arguments.
+>>> Print a trace of simple commands, for commands, case
+>>> commands, select commands, and arithmetic for commands
+>>> and their arguments or associated word lists after they
+>>> are expanded and before they are executed. The value of
+>>> the PS4 variable is expanded and the resultant value
+>>> is printed before the command and its expanded arguments
 >> -o -> Set the option corresponding to option-name  
 >> pipefail -> If set, the return value of a pipeline
->> is the value of the last (rightmost) command to exit with >>a non-zero status, or zero if all commands in the pipeline >>exit successfully. This option is disabled by default.
+>>> is the value of the last (rightmost) command
+>>> to exit with >>a non-zero status, or zero if all commands
+>>> in the pipeline >>exit successfully. This option 
+>>> is disabled by default.
 >
 <!--- THis empty line inside the block is necessary for correct format -->
 >[!TIP]
@@ -202,7 +216,7 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake)
 <!--- THis empty line inside the block is necessary for correct format -->
 ### build-essential [![alt text][1]](https://itsfoss.com/build-essential-ubuntu/)
 <!--- THis empty line inside the block is necessary for correct format -->
-#### Contains a list of essential packages
+#### Contains a list of file build-essential/essential-packages-list
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash
 This list was generated on Sun 03 Jan 2021 11:30:56 AM CET for amd64

@@ -1,6 +1,6 @@
 # thinkfan Debian Buster 12.11
 
-## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.10 operating system and Lenovo hardware of the ThinkCentre M92P type
+## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.11 operating system and Lenovo hardware of the ThinkCentre M92P type
 
 Further information can be found in the file. [![alt text][1]](./project_path.md)
 
