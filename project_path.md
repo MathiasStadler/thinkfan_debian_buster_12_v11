@@ -1,21 +1,19 @@
 # The detailed project path  
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ## Project name => thinkfan Debian Buster 12.11
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ## Project target
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ## This repository shows how to use the utility  thinkfan [![Alt-Text][1]](https://github.com/vmatare/thinkfanl). The approach is described using the example of the Debian 12.10 operating system and Lenovo hardware typ ThinkCentre M92P
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ## Project start date
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 $ date
 Sun Jun 29 02:34:05 PM CEST 2025
 ```
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ## Hardware
-
-###
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash<!-- markdownlint-disable-line code-block-style -->
 hostnamectl 
@@ -32,15 +30,14 @@ hostnamectl
 Firmware Version: 9SKT58AUS
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
-### Install How do install lshw  on debian [![alt text][1]](https://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/)
+### How do install lshw  on debian [![alt text][1]](https://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/)
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash<!-- markdownlint-disable-line code-block-style -->
 sudo apt update
 sudo apt install lshw
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
-### Used
-
+### Used hardware
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash<!-- markdownlint-disable-line code-block-style -->
         sudo lshw -class cpu -class memory
@@ -88,12 +85,12 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 <!-- Required to comply with the Markdownlint specification -->
 ## OS-Version - uname -a
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 $ uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
-
+<!--- THis empty line inside the block is necessary for correct format -->
 ## IDE used for the project - MS Visual Studio Code
 <!--- THis empty line inside the block is necessary for correct format -->
 ```text
@@ -109,23 +106,26 @@ OS: Linux x64 6.1.0-34-
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
 >[!NOTE]
-> Manual page **curl** [![alt text][1]](https://linux.die.net/man/1/curl)
+> Manual page ``curl`` [![alt text][1]](https://linux.die.net/man/1/curl)
 >
-> Manual page **wget** [![alt text][1]](https://linux.die.net/man/1/wget)
+> Manual page ``wget`` [![alt text][1]](https://linux.die.net/man/1/wget)
 >
 <!--- THis empty line inside the block is necessary for correct format -->
 >[!NOTE]
 >Different between the utilities ``curl`` vs ``wget`` [![alt text][1]](https://daniel.haxx.se/docs/curl-vs-wget.html)
 <!--- THis empty line inside the block is necessary for correct format -->
 <!-- FIXIT sudo apt-get update vs upgrade – What is the Difference https://www.freecodecamp.org/news/sudo-apt-get-update-vs-upgrade-what-is-the-difference/ -->
-<!-- TODO check is a package already installed in the latest stable version>
+<!-- [ ] check is a package already installed in the latest stable version>
+<!-- [x] done-->
 <!-- TODO Find daily Use Case for a PC Computer-->
 <!-- TODO hOW enable thinkfan now on debian -->
 <!-- TODO Docker/Podman image for compile optimize gcc scache -->
 <!-- TODO user less scache command without editor-->
-<!-- TODO best optimize version for gcc depend of cpu mem io -->
-<!-- TODO count intration of program / debug >
-## Used compiler
+<!-- TODO best optimize flags version for gcc depend of cpu mem io -->
+<!-- TODO count inaction of program / debug -->
+## Used compiler and tools
+
+### gcc
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash
 gcc --version
@@ -135,31 +135,109 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
-## Install & update necessary package [![alt text][1]](https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html)
+### cmake
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash
-sudo -i # make user to root
+cmake --version
+cmake version 3.25.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake)
+```
+<!--- THis empty line inside the block is necessary for correct format -->
+>[!TIP]
+>How To Use set and pipefail in Bash Scripts on Linux/Debian [![alt text][1]](https://www.howtogeek.com/782514/how-to-use-set-and-pipefail-in-bash-scripts-on-linux/)  
+>>Using the example of installing the package build-essential  
+>>see below
+><!--- THis empty line inside the block is necessary for correct format -->
+>```bash
+>#!/bin/bash
+>set -euxo pipefail
+>```
+<!--- THis empty line inside the block is necessary for correct format -->
+>[!TIP]
+>How to see contents of a .deb Debian / Ubuntu package file [![alt text][1]](https://www.cyberciti.biz/faq/view-contents-of-deb-file/)
+><!--- THis empty line inside the block is necessary for correct format -->
+>```bash
+>set -euxo pipefail && \
+>#install/update && \
+>sudo apt-get --yes update && \
+>sudo apt-get install --yes apt-file && \
+>#Updating APT database && \
+>sudo apt-file update && \
+>#List contents Of a Debian .deb File / Package && \
+>#apt-file list packageName && \
+>sudo apt-file list build-essential && \
+>#change to /tmp folder && \
+>cd /tmp
+>```
+<!--- THis empty line inside the block is necessary for correct format -->
+### build-essential [![alt text][1]](https://itsfoss.com/build-essential-ubuntu/)
+<!--- THis empty line inside the block is necessary for correct format -->
+#### Contains a list of essential packages
+<!--- THis empty line inside the block is necessary for correct format -->
+```bash
+This list was generated on Sun 03 Jan 2021 11:30:56 AM CET for amd64
+It contains a list of essential packages (which are also build-essential).
+
+base-files
+base-passwd
+bash
+bsdutils
+coreutils
+dash
+debianutils
+diffutils
+dpkg
+findutils
+grep
+gzip
+hostname
+init-system-helpers
+libc-bin
+login
+ncurses-base
+ncurses-bin
+perl-base
+sed
+sysvinit-utils
+tar
+util-linux
+```
+<!--- THis empty line inside the block is necessary for correct format -->
+>[!TIP]
+>Obtain root shell [![alt text][1]](https://www.cyberciti.biz/faq/how-to-install-and-configure-sudo-on-debian-linux/)
+><!--- THis empty line inside the block is necessary for correct format -->
+>```bash
+>sudo -s
+>## OR ##
+>sudo -i
+>```
+><!--- THis empty line inside the block is necessary for correct format -->
+<!--- THis empty line inside the block is necessary for correct format -->
+## Install and update described and additionally package [![alt text][1]](https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html)
+<!--- THis empty line inside the block is necessary for correct format -->
+```bash
+sudo -i # obtain root shell
 apt update # fetches the latest version of the package list from your distro's software repository
 apt upgrade # upgrade is used to install available upgrades of all packages currently installed on the system from the sources configured via sources.list
-apt install -y cmake-curses-gui
 apt install -y build-essential
 apt install -y cmake
+apt install -y cmake-curses-gui
 apt install -y g++
-apt install -y libyaml-cpp-dev
-apt install -y libyaml-cpp-dev pkgconfig
-apt install -y libyaml-cpp-dev pkg-config
 apt install -y libsensors-dev
-
-
+apt install -y libyaml-cpp-dev
+apt install -y libyaml-cpp-dev pkg-config
+apt install -y libyaml-cpp-dev pkgconfig
 ```
+<!--- THis empty line inside the block is necessary for correct format -->
 
 >[!TIP]
-<!--- THis empty line inside the block is necessary for correct format -->
+><!--- THis empty line inside the block is necessary for correct format -->
 >- Download Link symbol via wget [![alt text][1]](https://askubuntu.com/questions/207265/how-to-download-a-file-from-a-website-via-terminal) man page [![alt text][1]](https://linux.die.net/man/1/wget)
 >- Command option wget
->   -P ``<dir>``  **UPPER LETTER**  
+>   -P ``<dir>``  **P as UPPER LETTER**  
 >   --page-requisites  
->   This option causes Wget to download all the files that are necessary to properly display a given HTML page. This includes such things as inlined images, sounds, and referenced stylesheets
+>   This option causes ``wget`` to download all the files that are necessary to properly display a given HTML page. This includes such things as inlined images, sounds, and referenced stylesheets
 <!--- THis empty line inside the block is necessary for correct format -->
 >## Command to create folder and download via bash shell
 <!--- THis empty line inside the block is necessary for correct format -->
