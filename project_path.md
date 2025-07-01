@@ -155,7 +155,7 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake)
 >
 >## or in usage() ##
 >usage(){
->    echo "$_self: arg1 arg2"
+>  echo "$_self: arg1 arg2"
 >}
 >```
 <!--- THis empty line inside the block is necessary for correct format -->
@@ -276,11 +276,11 @@ util-linux
 >>files such as .profile or .login will be read by the shell.
 >>If a command is specified, it is passed to the shell for
 >>execution via the shell's -c option.  If no command is
->>specified, an interactive shell is executed.
+>>specified, an interactive shell is executed.  
 ><!--- THis empty line inside the block is necessary for correct format -->
 >```bash
 >sudo -s
->## OR ##
+>## OR ## 
 >sudo -i
 >```
 ><!--- THis empty line inside the block is necessary for correct format -->
