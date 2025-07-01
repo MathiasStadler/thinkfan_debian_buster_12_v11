@@ -144,10 +144,39 @@ cmake version 3.25.1
 CMake suite maintained and supported by Kitware (kitware.com/cmake)
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
+
+<!--- THis empty line inside the block is necessary for correct format -->
+>[!TIP]
+>TL;DR: What is the Set Command in Linux? [![alt text][1]](https://ioflood.com/blog/set-linux-command/)
+>>The set command in Linux is a built-in shell command used to set or unset
+>>values of shell options and positional parameters. The basic use syntax is,
+>>set [options] [arguments]. It’s like a master control panel
+>>for your shell environment.
+><!--- THis empty line inside the block is necessary for correct format -->
+<!--- THis empty line inside the block is necessary for correct format -->
+>[!TIP]
+> set command options [![alt text][1]](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
+>
+>```set -euxo pipefail```  
+>> set -> Modifying Shell Behavior  
+>> -e ->  Exit immediately if a pipeline,
+>> which may consist of a single simple command
+>> -u ->
+>> -x ->  
+>>>Print a trace of simple commands, for commands,
+>>> case commands, select commands, and arithmetic for >> >>>commands and their arguments or associated word lists >>>after >>they are expanded and before they are executed. >>>The value >>of the PS4 variable is expanded and the >>>resultant value is >>printed before the command and its >>>expanded arguments.
+>> -o -> Set the option corresponding to option-name  
+>> pipefail -> If set, the return value of a pipeline
+>> is the value of the last (rightmost) command to exit with >>a non-zero status, or zero if all commands in the pipeline >>exit successfully. This option is disabled by default.
+>
+<!--- THis empty line inside the block is necessary for correct format -->
 >[!TIP]
 >How To Use set and pipefail in Bash Scripts on Linux/Debian [![alt text][1]](https://www.howtogeek.com/782514/how-to-use-set-and-pipefail-in-bash-scripts-on-linux/)  
 >>Using the example of installing the package build-essential  
 >>see below
+
+<!--- THis empty line inside the block is necessary for correct format -->
+<!-- FIXIT https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html -->
 ><!--- THis empty line inside the block is necessary for correct format -->
 >```bash
 >#!/bin/bash
@@ -203,9 +232,17 @@ sysvinit-utils
 tar
 util-linux
 ```
-<!--- THis empty line inside the block is necessary for correct format -->
+<!--- This empty line inside the block is necessary for correct format -->
 >[!TIP]
->Obtain root shell [![alt text][1]](https://www.cyberciti.biz/faq/how-to-install-and-configure-sudo-on-debian-linux/)
+>Obtain root shell [![alt text][1]](https://www.cyberciti.biz/faq/how-to-install-and-configure-sudo-on-debian-linux/)  
+>sudo -i [![alt text][1]](https://unix.stackexchange.com/questions/106663/how-to-run-a-command-that-involves-redirecting-or-piping-with-sudo)
+>>The -i (simulate initial login) option runs the shell
+>>specified by the password database entry of the target user
+>>as a login shell.  This means that login-specific resource
+>>files such as .profile or .login will be read by the shell.
+>>If a command is specified, it is passed to the shell for
+>>execution via the shell's -c option.  If no command is
+>>specified, an interactive shell is executed.
 ><!--- THis empty line inside the block is necessary for correct format -->
 >```bash
 >sudo -s
@@ -214,22 +251,42 @@ util-linux
 >```
 ><!--- THis empty line inside the block is necessary for correct format -->
 <!--- THis empty line inside the block is necessary for correct format -->
-## Install and update described and additionally package [![alt text][1]](https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html)
+## Install and update described and additionally packages [![alt text][1]](https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html)
 <!--- THis empty line inside the block is necessary for correct format -->
 ```bash
-sudo -i # obtain root shell
-apt update # fetches the latest version of the package list from your distro's software repository
-apt upgrade # upgrade is used to install available upgrades of all packages currently installed on the system from the sources configured via sources.list
-apt install -y build-essential
-apt install -y cmake
-apt install -y cmake-curses-gui
-apt install -y g++
-apt install -y libsensors-dev
-apt install -y libyaml-cpp-dev
-apt install -y libyaml-cpp-dev pkg-config
-apt install -y libyaml-cpp-dev pkgconfig
+echo "# Step 1 => Change to /tmp folder" && \
+cd /tmp && \
+echo "# Step 2 => Obtain root shell" && \
+sudo -i
+# next step  inside root shell
+echo "# Step 3 => update/upgrade" && \
+set -euxo pipefail && \
+echo "# fetches the latest version of the package" && \
+echo "list from your distro's software repository" && \
+apt update && \ 
+echo "# apt upgrade - is used to install available upgrades " && \
+echo "of all packages currently installed on the system from " && \
+echo "the sources configured via sources.list" && \ 
+apt upgrade -y && \
+echo "# Step 4 => install packages" && \
+apt install -y build-essential && \
+apt install -y cmake && \
+apt install -y cmake-curses-gui && \
+apt install -y g++ && \
+apt install -y libsensors-dev && \
+apt install -y libyaml-cpp-dev && \
+apt install -y pkg-config && \
+echo $?
+
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
+## Create a folder for this project
+<!--- THis empty line inside the block is necessary for correct format -->
+```bash
+
+```
+<!--- THis empty line inside the block is necessary for correct format -->
+## Fetch project from GitHub [![Alt-Text][1]](https://github.com/vmatare/thinkfanl)
 
 >[!TIP]
 ><!--- THis empty line inside the block is necessary for correct format -->
